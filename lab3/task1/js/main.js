@@ -4,6 +4,7 @@ let randomNum = Math.floor(16 * Math.random());
     file: " ",
     caption: " "
 } */
+console.log("Hello there");
 let taskImages = [];
 let allFigs = document.getElementsByTagName("img");
 let figCap = document.getElementsByTagName("figcaption");
