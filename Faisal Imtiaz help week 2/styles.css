@@ -1,0 +1,95 @@
+#hello {
+    font-size: 20px;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+#login{
+    text-align: left;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    right: 5px;
+    left: 5px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+#container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+@media all and (min-width: 768px){
+    #container{
+        display:flex;
+        flex-direction: row;
+        }
+    }
+
+/* #conainer > div{
+    border: 1px solid red;
+    margin: 5px;
+    width: 200px;
+    padding: 5px;
+} */
+#nav{
+    margin-left: 20px;
+    flex: 2;
+    /* border: 1px solid red; */
+    padding-left: 20px;
+}
+#photos{
+    /* border: 1px solid green; */
+    flex: 9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photos {
+    margin: 10px;
+    border: 1px solid red;
+    padding: 10px;
+    width: 210px;
+}
+
+#p1{
+    /* flex-grow: 1; */
+    flex-basis: 0px;
+}
+#p2{
+    /* flex-grow: 1; */
+    flex-basis: 0px;
+}
+#p3{
+    /* flex-grow: 1; */
+    flex-basis: 0px;
+}
+#p4{
+    /* flex-grow: 1; */
+    flex-basis: 0px;
+}
+#p5{
+    /* flex-grow: 1; */
+    flex-basis: 0px;
+}
+
+img{
+    padding: 5px;
+}
