@@ -1,5 +1,5 @@
 $(function(){
-    const QUOTES = "http://quotes.rest/qod.json?category=inspire";
+    //const QUOTES = "http://quotes.rest/qod.json?category=inspire";
     let fig = $("figure").html();
     //let randomNum = Math.floor(16 * Math.random());
     let taskImages = [];
@@ -10,21 +10,21 @@ $(function(){
         console.log(taskImages);
     }
     //$("#images").html(createFig(randomNum));
-    $.get(QUOTES, function(data){
+    /* $.get(QUOTES, function(data){
         //console.log("From jQuerry: " + data.contents.quotes.quote);
         $("#quotes").append(`<p>From jQuerry: ${data.contents.quotes.quote}</p>`);
     }).fail(function(){
         alert("Get request failed...");
-    });
+    }); */
 
-    fetch(QUOTES).then(function(response){
+    /* fetch(QUOTES).then(function(response){
         return response.json();
     }).then(function(data){
         //console.log("From fetch: " + data.contents.quotes.quote);
         $("#quotes").append(`<p>From fetch: ${data.contents.quotes.quote}</p>`);
     }).catch(function(error){
         alert(error);
-    });
+    }); */
 
     $("#searchButton").click(() => {
         let num = $("#searchInput").val();
