@@ -38,7 +38,7 @@ $(function(){
                 let imgSearch = checkCaptions(num);
                 $("#images").html("");
                 for (let i = 0; i < imgSearch.length; i++){
-                    $("#images").append(`<figure><a href="${imgSearch[i].image}"><img src="${imgSearch[i].image}" alt="something cool" width="200" height="200"></a><figcaption>${imgSearch[i].captions}</figcaption></figure>`);
+                    $("#images").append(`<figure><a href="${imgSearch[i].image}"><img src="${imgSearch[i].image}" alt="${imgSearch[i].captions}" width="200" height="200"></a><figcaption>${imgSearch[i].captions}</figcaption></figure>`);
                 }
             } else{
                 $("#navList").append(`<li><a href="#">${num}</a></li>`);

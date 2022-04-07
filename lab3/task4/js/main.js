@@ -1,5 +1,6 @@
 $(function(){
     //const QUOTES = "http://quotes.rest/qod.json?category=inspire";
+    const MEMES = "https://api.imgflip.com/get_memes";
     let fig = $("figure").html();
     //let randomNum = Math.floor(16 * Math.random());
     let taskImages = [];
@@ -17,14 +18,14 @@ $(function(){
         alert("Get request failed...");
     }); */
 
-    /* fetch(QUOTES).then(function(response){
+    fetch(MEMES).then(function(response){
         return response.json();
     }).then(function(data){
-        //console.log("From fetch: " + data.contents.quotes.quote);
-        $("#quotes").append(`<p>From fetch: ${data.contents.quotes.quote}</p>`);
+        console.log(data);
+        //$("#memes").append(`<p>From fetch: ${data.contents.quotes.quote}</p>`);
     }).catch(function(error){
         alert(error);
-    }); */
+    });
 
     $("#searchButton").click(() => {
         let num = $("#searchInput").val();
@@ -38,7 +39,7 @@ $(function(){
                 let imgSearch = checkCaptions(num);
                 $("#images").html("");
                 for (let i = 0; i < imgSearch.length; i++){
-                    $("#images").append(`<figure><a href="${imgSearch[i].image}"><img src="${imgSearch[i].image}" alt="something cool" width="200" height="200"></a><figcaption>${imgSearch[i].captions}</figcaption></figure>`);
+                    $("#images").append(`<figure><a href="${imgSearch[i].image}"><img src="${imgSearch[i].image}" alt="${imgSearch[i].captions}" width="200" height="200"></a><figcaption>${imgSearch[i].captions}</figcaption></figure>`);
                 }
             } else{
                 $("#navList").append(`<li><a href="#">${num}</a></li>`);
