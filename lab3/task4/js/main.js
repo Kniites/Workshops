@@ -22,7 +22,11 @@ $(function(){
         return response.json();
     }).then(function(data){
         console.log(data);
-        //$("#memes").append(`<p>From fetch: ${data.contents.quotes.quote}</p>`);
+        for(let i = 0; i < 10; i++){
+            let randomNum = Math.floor(101 * Math.random());
+            $("#memes").append(`<figure><a href="${data.memes[randomNum].url}"><img src="${data.memes[randomNum].url}" alt="${data.memes[randomNum].name}" width="${data.memes[randomNum].width}" height="${data.memes[randomNum].height}"></a><figcaption>${data.memes[randomNum].name}</figcaption></figure>`);
+        }
+        console.log($("#memes").html());
     }).catch(function(error){
         alert(error);
     });
