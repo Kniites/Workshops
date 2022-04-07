@@ -1,0 +1,9 @@
+{
+    "photos": [
+        {"file": "photos/DSC01049.JPG", "caption": "Night City"},
+        {"file": "photos/DSC01066.JPG", "caption": "Wheel"},
+        {"file": "photos/DSC02511.JPG", "caption": "Temple"},
+        {"file": "photos/DSC03810.jpg", "caption": "City of Night"},
+        {"file": "photos/DSC05750.jpg", "caption": "Beach"}
+    ]
+}
