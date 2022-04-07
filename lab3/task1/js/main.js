@@ -32,7 +32,7 @@ $(function(){
         let checkArray = [];
         for (let i = 0; i < taskImages.length; i++){
             if (taskImages[i].captions.includes(inputCheck)){
-                checkArray.push(taskImages[i])
+                checkArray.push(taskImages[i]);
             }
         }
         console.log(checkArray);
