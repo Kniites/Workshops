@@ -1,6 +1,6 @@
 $(function(){
-    //const QUOTES = "http://quotes.rest/qod.json?category=inspire";
-    //const MEMES = "https://api.imgflip.com/get_memes";
+    const QUOTES = "https://quotes.rest/qod.json?category=inspire";
+    const MEMES = "https://api.imgflip.com/get_memes";
     let fig = $("figure").html();
     //let randomNum = Math.floor(16 * Math.random());
     let taskImages = [];
@@ -11,26 +11,26 @@ $(function(){
         console.log(taskImages);
     }
     //$("#images").html(createFig(randomNum));
-    /* $.get(QUOTES, function(data){
-        //console.log("From jQuerry: " + data.contents.quotes.quote);
-        $("#quotes").append(`<p>From jQuerry: ${data.contents.quotes.quote}</p>`);
+    $.get(QUOTES, function(data){
+        console.log("From jQuerry: " + data.contents.quotes[0].quote);
+        $("#quotes").append(`<p>From jQuerry: ${data.contents.quotes[0].quote}</p>`);
     }).fail(function(){
         alert("Get request failed...");
-    }); */
+    });
 
-    /* fetch(MEMES).then(function(response){
+    fetch(MEMES).then(function(response){
         return response.json();
     }).then(function(data){
         console.log(data);
         for(let i = 0; i < 10; i++){
             let randomNum = Math.floor(101 * Math.random());
-            $("#memes").append(`<figure><a href="${data.memes[randomNum].url}"><img src="${data.memes[randomNum].url}" alt="${data.memes[randomNum].name}" width="${data.memes[randomNum].width}" height="${data.memes[randomNum].height}"></a><figcaption>${data.memes[randomNum].name}</figcaption></figure>`);
+            $("#memes").append(`<figure><a href="${data.data.memes[randomNum].url}"><img src="${data.data.memes[randomNum].url}" alt="${data.data.memes[randomNum].name}" width="${data.data.memes[randomNum].width}" height="${data.data.memes[randomNum].height}"></a><figcaption>${data.data.memes[randomNum].name}</figcaption></figure>`);
         }
         console.log($("#memes").html());
     }).catch(function(error){
         alert(error);
     });
- */
+
     $("#searchButton").click(() => {
         let num = $("#searchInput").val();
         if (isNaN(num) === false){
