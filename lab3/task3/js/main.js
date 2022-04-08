@@ -1,5 +1,6 @@
+const QUOTES = "https://quotes.rest/qod.json?category=inspire";
 $(function(){
-    const QUOTES = "http://quotes.rest/qod.json?category=inspire";
+    
     let fig = $("figure").html();
     //let randomNum = Math.floor(16 * Math.random());
     let taskImages = [];
@@ -11,8 +12,8 @@ $(function(){
     }
     //$("#images").html(createFig(randomNum));
     $.get(QUOTES, function(data){
-        //console.log("From jQuerry: " + data.contents.quotes.quote);
-        $("#quotes").append(`<p>From jQuerry: ${data.contents.quotes.quote}</p>`);
+        console.log("From jQuerry: " + data.contents.quotes[0].quote);
+        $("#quotes").append(`<p>From jQuerry: ${data.contents.quotes[0].quote}</p>`);
     }).fail(function(){
         alert("Get request failed...");
     });
@@ -20,8 +21,8 @@ $(function(){
     fetch(QUOTES).then(function(response){
         return response.json();
     }).then(function(data){
-        //console.log("From fetch: " + data.contents.quotes.quote);
-        $("#quotes").append(`<p>From fetch: ${data.contents.quotes.quote}</p>`);
+        console.log("From fetch: " + data.contents.quotes[0].quote);
+        $("#quotes").append(`<p>From fetch: ${data.contents.quotes[0].quote}</p>`);
     }).catch(function(error){
         alert(error);
     });

@@ -1,5 +1,5 @@
 $(function(){
-    //const QUOTES = "http://quotes.rest/qod.json?category=inspire";
+    //const QUOTES = "https://quotes.rest/qod.json?category=inspire";
     const MEMES = "https://api.imgflip.com/get_memes";
     let fig = $("figure").html();
     //let randomNum = Math.floor(16 * Math.random());
